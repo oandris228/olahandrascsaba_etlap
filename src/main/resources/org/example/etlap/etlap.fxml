@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="450.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="org.example.etlap.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <HBox prefHeight="50.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="Új étel felvétele">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Törlés" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <TitledPane animated="false" prefHeight="100.0" text="Áremelés">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="180.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="300.0">
+                                 <children>
+                                    <Spinner fx:id="percentageSpinner" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\%">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Spinner fx:id="priceSpinner">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Spinner>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ft">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="8.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onPercentageIncreaseButtonClick" prefWidth="100.0" text="Emelés">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#onPriceIncreaseButtonClick" prefWidth="100.0" text="Emelés">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <HBox prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <TableView prefHeight="300.0" prefWidth="500.0">
+              <columns>
+                <TableColumn fx:id="nameCol" prefWidth="200.0" text="Név" />
+                <TableColumn fx:id="categoryCol" prefWidth="100.0" text="Kategória" />
+                  <TableColumn fx:id="priceCol" prefWidth="110.0" text="Ár (Ft)" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+   </children>
+</VBox>
