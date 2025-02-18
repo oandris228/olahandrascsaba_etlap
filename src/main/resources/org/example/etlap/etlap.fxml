@@ -5,12 +5,13 @@
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="500.0" prefWidth="450.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="org.example.etlap.HelloController">
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="450.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.etlap.EtlapController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -99,7 +100,7 @@
       </TitledPane>
       <HBox prefHeight="200.0" prefWidth="200.0">
          <children>
-            <TableView prefHeight="300.0" prefWidth="500.0">
+            <TableView fx:id="etelek" prefHeight="300.0" prefWidth="500.0">
               <columns>
                 <TableColumn fx:id="nameCol" prefWidth="200.0" text="Név" />
                 <TableColumn fx:id="categoryCol" prefWidth="100.0" text="Kategória" />
@@ -108,6 +109,9 @@
             </TableView>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TextArea fx:id="leirasTextArea" prefHeight="76.0" prefWidth="424.0" />
+         </children></HBox>
    </children>
 </VBox>
